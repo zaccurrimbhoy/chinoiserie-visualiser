@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'PingFang SC'}
+    span.s2 {font: 12.0px 'Zapf Dingbats'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Chinoiserie Visualiser&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Georgia, serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fdf6ee;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #2c2c2c;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #4a2e1a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 1px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #7a6a5a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 1.5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #7a6a5a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-group {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sel-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 9px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Georgia, serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #c8b89a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #4a2e1a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background 0.2s, color 0.2s, opacity 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sel-btn:hover:not(.disabled) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #4a2e1a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fdf6ee;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sel-btn.active {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #4a2e1a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fdf6ee;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sel-btn.disabled {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-style: dashed;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#canvas-container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #c8b89a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e8ddd0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 320px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#result-img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>#placeholder-text {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #a09080;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.caption {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.82rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #7a6a5a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-right: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.divider {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 4px auto 20px auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid #e0d4c0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coming-soon {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #a09080;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 40px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Chinoiserie Visualiser&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="subtitle"&gt;Explore how chinoiserie objects complement different interior styles and room types&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-label"&gt;<span class="s1">①</span> Choose a chinoiserie object&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="btn-group" id="object-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-obj="fan"&gt;Decorative Fan&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-obj="chair"&gt;Japanned Chair&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-obj="bowl"&gt;Punch Bowl&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-obj="cup"&gt;Howitzer Cup&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-label"&gt;<span class="s1">②</span> Choose a room type&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="btn-group" id="room-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-room="living"&gt;Living Room&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-room="library"&gt;Library&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-room="dining"&gt;Dining Room&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-room="bedroom"&gt;Bedroom&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-label"&gt;<span class="s1">③</span> Choose an interior style&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="btn-group" id="style-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-style="min"&gt;Modern Minimalist&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-style="scan"&gt;Scandinavian&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-style="max"&gt;Maximalist&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="sel-btn" data-style="deco"&gt;Art Deco&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;hr class="divider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="canvas-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="placeholder-text"&gt;Select an object above to begin&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img id="result-img" src="" alt="" style="display:none;" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="caption" id="caption-text"&gt;&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// -------------------------------------------------------</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ALLOWED ROOMS PER OBJECT</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// -------------------------------------------------------</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const allowedRooms = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fan: <span class="Apple-converted-space">  </span>["living", "library", "dining", "bedroom"],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>chair: ["living", "library", "dining", "bedroom"],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>bowl:<span class="Apple-converted-space">  </span>["library", "dining"],</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cup: <span class="Apple-converted-space">  </span>["living", "library", "dining", "bedroom"],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// -------------------------------------------------------</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// IMAGES THAT ACTUALLY EXIST — add filenames here as you</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// complete them. Format: "object-style-room"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// e.g. "fan-min-living" means images/fan-min-living.png</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// -------------------------------------------------------</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const availableImages = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"fan-min-living",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// add more here as you complete them, e.g.:</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// "fan-scan-living",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// "fan-min-library",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// "chair-min-living",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// "bowl-min-dining",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// "cup-min-living",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// -------------------------------------------------------</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// CONTEXTUAL CAPTIONS</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// -------------------------------------------------------</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const roomNotes = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fan: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>living:<span class="Apple-converted-space">  </span>"Displayed as wall art or arranged as a decorative grouping above a mantelpiece.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>library: "Mounted as a scholarly curiosity — fans were prized collector's pieces in 18th-century Britain.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>dining:<span class="Apple-converted-space">  </span>"A refined decorative accent above a sideboard or displayed in a cabinet.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bedroom: "Adds an intimate decorative quality, historically kept on dressing tables.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>chair: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>living:<span class="Apple-converted-space">  </span>"Japanned chairs were status symbols in wealthy drawing rooms of the 17th and 18th centuries.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>library: "A gentleman's library was a natural home for lacquered furniture as a display of taste and learning.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>dining:<span class="Apple-converted-space">  </span>"Occasionally used as a side chair in formal dining rooms to signal wealth and cosmopolitan taste.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bedroom: "Placed as a decorative accent chair — japanned furniture was fashionable in ladies' bedchambers.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>bowl: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>library: "Large punch bowls were displayed on sideboards or shelves as trophies of taste and commerce.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>dining:<span class="Apple-converted-space">  </span>"The punch bowl was central to 18th-century dining and entertaining — a focal point of the table.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cup: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>living:<span class="Apple-converted-space">  </span>"Displayed in cabinets or on mantelpieces as part of a porcelain collection.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>library: "Howitzer cups were collected and displayed alongside books as markers of refined taste.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>dining:<span class="Apple-converted-space">  </span>"Used at the table for drinking or displayed on a dresser as part of a service.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>bedroom: "Kept on a dressing table as a decorative vessel, sometimes used to hold trinkets.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const objNames <span class="Apple-converted-space">  </span>= { fan: "Decorative Fan", chair: "Japanned Chair", bowl: "Punch Bowl", cup: "Howitzer Cup" };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const roomNames<span class="Apple-converted-space">  </span>= { living: "Living Room", library: "Library", dining: "Dining Room", bedroom: "Bedroom" };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const styleNames = { min: "Modern Minimalist", scan: "Scandinavian", max: "Maximalist", deco: "Art Deco" };</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let selectedObj <span class="Apple-converted-space">  </span>= null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let selectedRoom<span class="Apple-converted-space">  </span>= null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let selectedStyle = null;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateRoomAvailability() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!selectedObj) return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const allowed = allowedRooms[selectedObj];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll("#room-group .sel-btn").forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const room = btn.dataset.room;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (allowed.includes(room)) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>btn.classList.remove("disabled");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>btn.classList.add("disabled");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (selectedRoom === room) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>selectedRoom = null;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>btn.classList.remove("active");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateDisplay() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const resultImg <span class="Apple-converted-space">  </span>= document.getElementById("result-img");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const placeholder = document.getElementById("placeholder-text");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const caption <span class="Apple-converted-space">    </span>= document.getElementById("caption-text");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (selectedObj &amp;&amp; selectedRoom &amp;&amp; selectedStyle) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const key = `${selectedObj}-${selectedStyle}-${selectedRoom}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (availableImages.includes(key)) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>resultImg.src = `images/${key}.png`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>resultImg.alt = `${objNames[selectedObj]} in a ${styleNames[selectedStyle]} ${roomNames[selectedRoom]}`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>resultImg.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>placeholder.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const note = roomNotes[selectedObj]?.[selectedRoom] || "";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>caption.textContent = `${objNames[selectedObj]} · ${styleNames[selectedStyle]} ${roomNames[selectedRoom]}${note ? " — " + note : ""}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>resultImg.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>placeholder.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>placeholder.innerHTML = `&lt;span class="coming-soon"&gt;<span class="s2">✦</span> This combination is coming soon <span class="s2">✦</span>&lt;br&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;em&gt;${objNames[selectedObj]} · ${styleNames[selectedStyle]} ${roomNames[selectedRoom]}&lt;/em&gt;&lt;/span&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>caption.textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (selectedObj &amp;&amp; selectedRoom &amp;&amp; !selectedStyle) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultImg.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>placeholder.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>placeholder.textContent = "Now select an interior style <span class="s1">③</span>";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>caption.textContent = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (selectedObj &amp;&amp; !selectedRoom) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultImg.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>placeholder.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>placeholder.textContent = "Now select a room type <span class="s1">②</span>";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>caption.textContent = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>resultImg.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>placeholder.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>placeholder.textContent = "Select an object above to begin";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>caption.textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("#object-group .sel-btn").forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.addEventListener("click", function () {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll("#object-group .sel-btn").forEach(b =&gt; b.classList.remove("active"));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.classList.add("active");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>selectedObj = this.dataset.obj;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateRoomAvailability();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateDisplay();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("#room-group .sel-btn").forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.addEventListener("click", function () {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (this.classList.contains("disabled")) return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll("#room-group .sel-btn").forEach(b =&gt; b.classList.remove("active"));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.classList.add("active");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>selectedRoom = this.dataset.room;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateDisplay();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("#style-group .sel-btn").forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.addEventListener("click", function () {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll("#style-group .sel-btn").forEach(b =&gt; b.classList.remove("active"));</p>
+<p class="p1"><span class="Apple-converted-space">        </span>this.classList.add("active");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>selectedStyle = this.dataset.style;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateDisplay();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
